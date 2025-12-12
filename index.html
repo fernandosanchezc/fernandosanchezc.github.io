@@ -3,33 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tu Nombre</title>
-    <!-- Carga los iconos de Font Awesome -->
+    <title>Fernando Sánchez</title>
+    <!-- Iconos de Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Fuente elegante: Playfair Display para el nombre, Inter para el resto (carga desde Google Fonts) -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
         body {
             background-color: black;
             color: white;
-            font-family: Arial, sans-serif;
+            font-family: 'Inter', sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;  /* Cambiado: ahora empieza desde arriba */
             height: 100vh;
             margin: 0;
+            padding-top: 80px;  /* Espacio desde la parte superior (sube todo) - ajústalo a gusto (60px, 100px...) */
         }
         h1 {
-            font-size: 2em;
-            margin-bottom: 10px;
+            font-family: 'Playfair Display', serif;  /* Fuente elegante y premium para el nombre */
+            font-size: 3.5em;     /* Más grande */
+            margin: 0 0 20px 0;    /* Menos margen abajo */
+            letter-spacing: 1px;
         }
         .icons {
-            margin-bottom: 50px;
+            margin-bottom: 60px;  /* Más espacio antes del formulario */
         }
         .icons a {
             color: white;
-            font-size: 1.5em;
-            margin: 0 10px;
+            font-size: 1.8em;     /* Iconos un poco más grandes */
+            margin: 0 18px;       /* Más separación entre iconos */
             text-decoration: none;
+            opacity: 0.9;
+            transition: opacity 0.3s;
+        }
+        .icons a:hover {
+            opacity: 0.6;         /* Efecto hover sutil */
         }
         .form-container {
             text-align: center;
@@ -37,37 +47,51 @@
         form {
             display: flex;
             justify-content: center;
-            margin-bottom: 10px;
+            gap: 0;               /* Sin espacio entre input y botón */
+            margin-bottom: 15px;
         }
         input[type="email"] {
-            padding: 10px;
-            width: 200px;
+            padding: 14px 20px;
+            width: 280px;
             border: none;
-            background-color: #f0f0f0;
+            background-color: #f5f5f5;
             color: black;
+            font-size: 1em;
+            font-family: 'Inter', sans-serif;
         }
         button {
-            padding: 10px 20px;
+            padding: 14px 30px;
             background-color: black;
             color: white;
-            border: none;
+            border: 1px solid white;  /* Borde blanco sutil */
             cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #222;
         }
         p {
-            font-size: 0.9em;
-            color: #ccc;
+            font-size: 0.95em;
+            color: #bbbbbb;
+            margin: 0;
+            letter-spacing: 0.5px;
         }
     </style>
 </head>
 <body>
     <h1>Fernando Sánchez</h1>
     <div class="icons">
-        <a href="https://www.instagram.com/fernandosanchzc/" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.tiktok.com/@fernandosanchzc" target="_blank"><i class="fab fa-tiktok"></i></a>
-        <a href="https://www.youtube.com/@fernandosanchzc" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.instagram.com/tuusuario" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@tuusuario" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.youtube.com/channel/tucanal" target="_blank"><i class="fab fa-youtube"></i></a>
+        <!-- Puedes añadir más aquí, ejemplo:
+        <a href="https://spotify.com" target="_blank"><i class="fab fa-spotify"></i></a>
+        <a href="https://soundcloud.com" target="_blank"><i class="fab fa-soundcloud"></i></a> -->
     </div>
     <div class="form-container">
-        <form action="https://formspree.io/f/tu-endpoint-aqui" method="POST">
+        <form action="https://formspree.io/f/tu-endpoint" method="POST">
             <input type="email" name="email" placeholder="Email Address" required>
             <button type="submit">Join</button>
         </form>
