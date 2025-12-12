@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Nombre</title>
+    <!-- Carga los iconos de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .icons {
+            margin-bottom: 50px;
+        }
+        .icons a {
+            color: white;
+            font-size: 1.5em;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .form-container {
+            text-align: center;
+        }
+        form {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        input[type="email"] {
+            padding: 10px;
+            width: 200px;
+            border: none;
+            background-color: #f0f0f0;
+            color: black;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        p {
+            font-size: 0.9em;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fernando Sánchez</h1>
+    <div class="icons">
+        <a href="https://www.instagram.com/fernandosanchzc/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@fernandosanchzc" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.youtube.com/@fernandosanchzc" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+    <div class="form-container">
+        <form action="https://formspree.io/f/tu-endpoint-aqui" method="POST">
+            <input type="email" name="email" placeholder="Email Address" required>
+            <button type="submit">Join</button>
+        </form>
+        <p>newsletter for the body, mind, and soul</p>
+    </div>
+</body>
+</html>
